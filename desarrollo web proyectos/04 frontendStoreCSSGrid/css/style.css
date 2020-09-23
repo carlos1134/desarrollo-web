@@ -1,0 +1,226 @@
+:root {
+    --violeta: rgb(177, 2, 177);
+    --violetaosc: rgb(90, 2, 90);
+    --amarillo: rgb(240, 191, 33);
+    --fuenteprincipal: 'Staatliches', cursive;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /** 1rem = 10px**/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--violeta);
+    line-height: 2;
+    font-size: 3rem;
+}
+
+body.footer-fijo {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: var(--amarillo);
+    font-family: var(--fuenteprincipal);
+    font-weight: 200;
+    text-align: center;
+    font-size: 4rem;
+}
+
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+.header {
+    display: grid;
+    justify-content: center;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+}
+
+.barra {
+    background-color: var(--violetaosc);
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.barra .nav {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 8rem;
+    justify-content: center;
+}
+
+.barra .nav a {
+    font-family: var(--fuenteprincipal);
+    text-decoration: none;
+    font-size: 3rem;
+    text-align: center;
+    color: white;
+}
+
+.barra .nav a:hover {
+    color: var(--amarillo);
+}
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .lista-productos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-column-gap: 2rem;
+        row-gap: 2rem;
+    }
+}
+
+.producto {
+    background-color: var(--violetaosc);
+    padding: 1rem;
+    max-width: 100%;
+}
+
+.contenido-producto p {
+    font-family: var(--fuenteprincipal);
+    color: white;
+    text-align: center;
+    margin: 1rem 0;
+    line-height: 1.2;
+}
+
+.contenido-producto .titulo {
+    font-size: 4rem;
+}
+
+.contenido-producto .precio {
+    font-size: 2.8rem;
+    color: var(--amarillo);
+}
+
+.grafico {
+    min-height: 300px;
+    max-width: 100%;
+    background-position: center center;
+    background-size: cover;
+}
+
+.grafico1 {
+    background-image: url(/img/grafico1.jpg);
+    background-repeat: no-repeat;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+}
+
+.grafico2 {
+    background-image: url(/img/grafico2.jpg);
+    background-repeat: no-repeat;
+    grid-row: 8 / 9;
+    grid-column: 1 / 3;
+}
+
+@media (min-width: 768px) {
+    .grafico2 {
+        grid-row: 5 / 6;
+        grid-column: 2 / 4;
+    }
+}
+
+@media (min-width: 768px) {
+    .contenedor-informacion {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr;
+        column-gap: 3rem;
+    }
+}
+
+.texto-nosotros {
+    text-align: justify;
+}
+
+.footer {
+    margin-top: 8rem;
+    background-color: var(--violetaosc);
+    margin-bottom: 0;
+}
+
+.copyright {
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.pedido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 6rem);
+    column-gap: 0.2rem;
+    row-gap: 0.2rem;
+}
+
+.campo {
+    background-color: rgba(0, 0, 0, 0.548);
+    border: 3px solid white;
+    font-family: var(--fuenteprincipal);
+    font-size: 3rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.talla {
+    grid-column: 1 / 3;
+}
+
+.talla:hover {
+    cursor: pointer;
+}
+
+.cantidad:hover {
+    cursor: pointer;
+}
+
+.boton {
+    background-color: var(--amarillo);
+    font-family: var(--fuenteprincipal);
+    border: 1px solid var(--amarillo);
+    border-radius: 1rem;
+    transition: background-color .1s ease;
+    grid-column: 1 / 4;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: rgb(209, 209, 4);
+}
+
+
+/**imagen pagina producto**/
+
+.imagen-producto {
+    width: 100%;
+}
